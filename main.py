@@ -1,6 +1,6 @@
 from art import logo
-from replit import clear
 import random
+from os import system, name
 
 ############### Our Blackjack House Rules #####################
 
@@ -12,6 +12,12 @@ import random
 ## The cards in the list have equal probability of being drawn.
 ## Cards are not removed from the deck as they are drawn.
 ## The computer is the dealer.
+
+def clear():
+  if name == "nt":
+    _ = system("cls")
+  else: 
+    _ = system("clear")
 
 def deal_card():
   """Returns random card from the deck"""
@@ -26,7 +32,6 @@ def calculate_score(cards):
     cards.remove(11)
     cards.append(1)
     return sum(cards)
-
   return sum(cards)
 
 def compare(user_score, comp_score):
