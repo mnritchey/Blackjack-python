@@ -68,7 +68,7 @@ def play_game():
     user_score = calculate_score(user_cards)
     comp_score = calculate_score(comp_cards)
 
-    print(f"    Your cards: {user_cards}. Current score: {user_score}")
+    print(f"    Your cards: {user_cards}. Current score: {user_score}.")
     print(f"    Computer's first card is {comp_cards[0]}.")
 
     if user_score == 0 or comp_score == 0 or user_score > 21:
